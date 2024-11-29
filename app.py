@@ -26,13 +26,13 @@ llm = st.selectbox("Seleccione el LLM", dic_emp[empresa])
 api_key = st.text_input("API Key: ")
 if api_key:
     if empresa == 'OpenAI':
-        llm_oai = ChatOpenAI(
+        llm_t = ChatOpenAI(
             model=llm,
             api_key=api_key
         )
 
     else:
-        llm = ChatAnthropic(
+        llm_t = ChatAnthropic(
             model=llm,
             api_key=api_key
         )
@@ -80,7 +80,7 @@ if st.button("Ejecutar"):
     for rep in range(num_runs):
         for temp in [0.1, 0.4, 0.8, 1]:
             for text, id in tqdm(zip(df['texto'].values,df['id'].values)):
-                ans = llm.invoke(PROMPT_1 + " " + text, temperature=temp)
+                ans = llm_t.invoke(PROMPT_1 + " " + text, temperature=temp)
                 ans = ans.content
                 num = ans.find("{")
                 ans = ans[num:]
