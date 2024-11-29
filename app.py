@@ -73,7 +73,7 @@ if doc:
         st.error("El número o el nombre de las columnas no coinciden.")
         st.stop()
 
-num_runs = st.slider("Seleccione un número de ejecuciones", 5, 25)
+num_runs = st.slider("Seleccione un número de ejecuciones", 1, 25)
 if st.button("Ejecutar"):
     infos = []
 
