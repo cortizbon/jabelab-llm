@@ -11,15 +11,12 @@ st.set_page_config(layout='wide')
 
 st.title("LLM - JabeLab")
 
-
-
 dic_emp = {'OpenAI': ['gpt-4',
                       'gpt-4o',
                       'gpt-3.5-turbo-0125'],
            'Anthropic': ["claude-3-5-haiku-20241022",
                          "claude-3-5-sonnet-20241022",
                          "claude-3-opus-20240229"]}
-
 
 empresa = st.selectbox("Seleccione una empresa: ", dic_emp.keys())
 llm = st.selectbox("Seleccione el LLM", dic_emp[empresa])
@@ -54,6 +51,7 @@ st.dataframe(res)
 
 st.write("Habrá una columna extra al final que indicará el número de la repetición si se quieren simular las respuestas más de una vez.")
 st.write("Los valores de 1 y 0 indican que el LLM determinó que el texto corresponde a la categoría (1) o no (0).")
+st.write("La columna LLM muestra una combinación nombrellm_temp. Entre más cerca esté la temperatura a 0, más deterministas son las respuestas. Entre más se leje de 0, más aleatorias son las respuestas.")
 
 st.write("Los nombres de las columnas hacen referencia a las categorías: EGOISM, HONESTY, MORAL-CONCERN, PROSOCIALITY, FAIRNESS, SOCIAL-NORMS, TAX-MORAL, RISKY.")
 with st.expander("Definiciones:"):
