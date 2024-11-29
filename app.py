@@ -52,7 +52,10 @@ columns=["E", "H", "MC", "PS", "F", "SN", "TM", "R", "llm", "id"])
 
 st.dataframe(res)
 
-st.write("Las columnas hacen referencia a las categorías: EGOISM, HONESTY, MORAL-CONCERN, PROSOCIALITY, FAIRNESS, SOCIAL-NORMS, TAX-MORAL, RISKY")
+st.write("Habrá una columna extra al final que indicará el número de la repetición si se quieren simular las respuestas más de una vez.")
+st.write("Los valores de 1 y 0 indican que el LLM determinó que el texto corresponde a la categoría (1) o no (0).")
+
+st.write("Los nombres de las columnas hacen referencia a las categorías: EGOISM, HONESTY, MORAL-CONCERN, PROSOCIALITY, FAIRNESS, SOCIAL-NORMS, TAX-MORAL, RISKY.")
 with st.expander("Definiciones:"):
     st.write("""
     EGOISM: Egoism refers to behavior or attitudes driven by self-interest, prioritizing personal benefit over the welfare of others. In responses, egoism may manifest as a focus on maximizing one's own utility, wealth, or well-being without regard for collective or societal outcomes.\n
@@ -77,9 +80,9 @@ num_runs = st.slider("Seleccione un número de ejecuciones", 1, 25)
 if st.button("Ejecutar"):
 
     infos = []
-    temp=0.1
 
     for rep in range(num_runs):
+        for temp in [0.1, 0.4, 0.8, 1]:
             for text, id in zip(df['texto'].values,df['id'].values):
                 ans = llm_t.invoke(PROMPT_1 + " " + text, temperature=temp)
                 ans = ans.content
