@@ -66,12 +66,12 @@ with st.expander("Definiciones:"):
     """)
 
 doc = st.file_uploader("Cargue el documento", ['csv'])
+if doc:
+    df = pd.read_csv(doc)
 
-df = pd.read_csv(doc)
-
-if not verify_column_names(df):
-    st.error("El número o el nombre de las columnas no coinciden.")
-    st.stop()
+    if not verify_column_names(df):
+        st.error("El número o el nombre de las columnas no coinciden.")
+        st.stop()
 
 num_runs = st.slider("Seleccione un número de ejecuciones", 5, 25)
 if st.button("Ejecutar"):
