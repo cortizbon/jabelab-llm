@@ -95,7 +95,7 @@ if st.button("Ejecutar"):
         try:
             di = eval(dictio['info'])
             di['llm'] = dictio['llm']
-            di['code'] = dictio['code']
+            di['id'] = dictio['id']
             di['rep'] = dictio['rep']
             series.append(pd.Series(di))
         except:
