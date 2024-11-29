@@ -1,0 +1,7 @@
+pandas
+tqdm
+langchain-anthropic
+langchain-openai
+plotly
+matplotlib
+tqdm
