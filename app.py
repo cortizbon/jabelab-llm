@@ -55,13 +55,13 @@ st.dataframe(res)
 st.write("Las columnas hacen referencia a las categorías: EGOISM, HONESTY, MORAL-CONCERN, PROSOCIALITY, FAIRNESS, SOCIAL-NORMS, TAX-MORAL, RISKY")
 with st.expander("Definiciones:"):
     st.write("""
-    EGOISM: Egoism refers to behavior or attitudes driven by self-interest, prioritizing personal benefit over the welfare of others. In responses, egoism may manifest as a focus on maximizing one's own utility, wealth, or well-being without regard for collective or societal outcomes.
-    HONESTY: Honesty involves truthfulness and integrity in communication and actions, often reflecting an internal commitment to moral or ethical principles. It can also relate to compliance with social or institutional rules.
-    MORAL-CONCERN: Moral concern pertains to the consideration of ethical implications and the welfare of others when making decisions. It reflects an awareness of the moral consequences of one’s actions.
-    PROSOCIALITY: Prosociality refers to voluntary actions intended to benefit others, such as helping, sharing, or cooperating. It reflects altruistic or community-oriented behavior.
-    FAIRNESS: Fairness involves perceptions of justice, equity, and impartiality in interactions or resource distributions. It focuses on the idea that individuals should be treated equally or proportionately based on their contributions or needs.
-    SOCIAL-NORMS: Social norms are the shared expectations or rules within a group or society regarding acceptable behavior. They guide individual actions based on what is deemed appropriate by others.
-    TAX-MORAL: refers to the intrinsic motivation to comply with tax obligations, beyond legal enforcement. It reflects individuals' attitudes toward paying taxes as a civic duty or moral obligation.
+    EGOISM: Egoism refers to behavior or attitudes driven by self-interest, prioritizing personal benefit over the welfare of others. In responses, egoism may manifest as a focus on maximizing one's own utility, wealth, or well-being without regard for collective or societal outcomes.\n
+    HONESTY: Honesty involves truthfulness and integrity in communication and actions, often reflecting an internal commitment to moral or ethical principles. It can also relate to compliance with social or institutional rules.\n
+    MORAL-CONCERN: Moral concern pertains to the consideration of ethical implications and the welfare of others when making decisions. It reflects an awareness of the moral consequences of one’s actions.\n
+    PROSOCIALITY: Prosociality refers to voluntary actions intended to benefit others, such as helping, sharing, or cooperating. It reflects altruistic or community-oriented behavior.\n
+    FAIRNESS: Fairness involves perceptions of justice, equity, and impartiality in interactions or resource distributions. It focuses on the idea that individuals should be treated equally or proportionately based on their contributions or needs.\n
+    SOCIAL-NORMS: Social norms are the shared expectations or rules within a group or society regarding acceptable behavior. They guide individual actions based on what is deemed appropriate by others.\n
+    TAX-MORAL: refers to the intrinsic motivation to comply with tax obligations, beyond legal enforcement. It reflects individuals' attitudes toward paying taxes as a civic duty or moral obligation.\n
     RISKY: pertains to behaviors or decisions involving uncertainty and the potential for loss. It often reflects a willingness to take chances for the possibility of higher rewards.
     """)
 
