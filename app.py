@@ -24,18 +24,18 @@ dic_emp = {'OpenAI': ['gpt-4',
 empresa = st.selectbox("Seleccione una empresa: ", dic_emp.keys())
 llm = st.selectbox("Seleccione el LLM", dic_emp[empresa])
 api_key = st.text_input("API Key: ")
+if api_key:
+    if empresa == 'OpenAI':
+        llm_oai = ChatOpenAI(
+            model=llm,
+            api_key=api_key
+        )
 
-if empresa == 'OpenAI':
-    llm_oai = ChatOpenAI(
-        model=llm,
-        api_key=api_key
-    )
-
-else:
-    llm = ChatAnthropic(
-        model=llm,
-        api_key=api_key
-    )
+    else:
+        llm = ChatAnthropic(
+            model=llm,
+            api_key=api_key
+        )
 
 # ingresar documento en un formato específico
 st.header("Carga de documentos")
