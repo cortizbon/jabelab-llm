@@ -75,11 +75,12 @@ if doc:
 
 num_runs = st.slider("Seleccione un número de ejecuciones", 1, 25)
 if st.button("Ejecutar"):
+
     infos = []
 
     for rep in range(num_runs):
         for temp in [0.1, 0.4, 0.8, 1]:
-            for text, id in tqdm(zip(df['texto'].values,df['id'].values)):
+            for text, id in zip(df['texto'].values,df['id'].values):
                 ans = llm_t.invoke(PROMPT_1 + " " + text, temperature=temp)
                 ans = ans.content
                 num = ans.find("{")
