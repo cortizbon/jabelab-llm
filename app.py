@@ -46,9 +46,9 @@ prueba = pd.DataFrame({'id':['iji3h', '8uje3'],
 st.dataframe(prueba)
 st.write("El documento no puede pesar más de 200mb. Podrá descargar un documento de tipo '.csv' como el siguiente: ")
 
-res = pd.DataFrame([[0,0,0,1,1,0,0,1,0, "claude-3-opus-20240229_0.1", "iji3h"],
-[1,0,0,0,0,1,0,0,0, "claude-3-opus-20240229_0.1", '8uje3']], 
-columns=["E",	"H", "MC", "PS", "F", "SN",	"TM", "R", "llm", "id"])
+res = pd.DataFrame([[0,0,1,1,0,0,1,0, "claude-3-opus-20240229_0.1", "iji3h"],
+[0,0,0,0,1,0,0,0, "claude-3-opus-20240229_0.1", '8uje3']], 
+columns=["E", "H", "MC", "PS", "F", "SN", "TM", "R", "llm", "id"])
 
 st.dataframe(res)
 
