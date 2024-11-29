@@ -30,6 +30,7 @@ def verify_column_names(df):
         for col in cols:
             if col not in nombre_columnas:
                 return False
+        return True
     return False
 
 def verify_num_columns(df):
